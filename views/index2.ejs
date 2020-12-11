@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/reset.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form method="POST" action="/">
+        <p>spreadsheetのURLを入力してください。<input type="text" name="url" value='<%= url %>'></p>
+        <input type="submit" value="検索">
+    </form>
+    <ul style="list-style-type: none;">
+        <% for (let i of attendant){ %>
+        <li><%= i %></li>
+        <% } %>
+    </ul>
+</body>
+</html>
